@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="textStart">
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/materialSlider"
+        android:layout_width="369dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="464dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="124dp"
+        android:contentDescription="@string/app_name"
+        android:stepSize="100"
+        android:valueFrom="0"
+        android:valueTo="1000"
+        app:haloColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:thumbColor="@color/blue"
+        app:thumbStrokeColor="@color/blue"
+        app:tickColorActive="@color/blue"
+        app:tickColorInactive="@color/blue"
+        app:trackColorActive="@color/blue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginBottom="130dp"
+        android:text="Add Water"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/baseline_water_drop_24"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/materialSlider"
+        app:layout_constraintTop_toBottomOf="@+id/materialSlider"
+        app:layout_constraintVertical_bias="0.512" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="130dp"
+        android:text="Refresh Daily Water"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/baseline_refresh_24"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/materialSlider"
+        app:layout_constraintTop_toBottomOf="@+id/materialSlider"
+        app:layout_constraintVertical_bias="0.512" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="31sp"
+        android:text="Today"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/mainWater"
+        app:layout_constraintEnd_toEndOf="@+id/mainWater"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        android:text="ml"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/materialSlider"
+        app:layout_constraintEnd_toEndOf="@+id/mainWater"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mainWater"
+        app:layout_constraintTop_toBottomOf="@+id/mainWater" />
+
+    <TextView
+        android:id="@+id/mainWater"
+        android:layout_width="214dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="10dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="222dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="134dp"
+        android:text="Water Counter"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecyclerView"
+        android:layout_width="306dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialSlider"
+        app:layout_constraintVertical_bias="0.816"
+        app:reverseLayout="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
